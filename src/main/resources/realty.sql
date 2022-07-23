@@ -1,0 +1,28 @@
+CREATE TABLE user(
+	user_id BIGINT(100) AUTO_INCREMENT PRIMARY KEY,
+	email VARCHAR(100) NOT NULL,
+	nick_name VARCHAR(100) NOT NULL,
+	name VARCHAR(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE my_condition(
+	condition_id BIGINT(100) AUTO_INCREMENT PRIMARY KEY,
+	preset_name VARCHAR(100) DEFAULT 'N',
+	addr_do VARCHAR(100) DEFAULT 'N',
+	addr_si VARCHAR(100) DEFAULT 'N',
+	addr_gu VARCHAR(100) DEFAULT 'N',
+	addr_dong VARCHAR(100) DEFAULT 'N',
+	addr_daero VARCHAR(100) DEFAULT 'N',
+	addr_remain VARCHAR(100) DEFAULT 'N',
+	budget INT(100) DEFAULT 0,
+	my_condition BIGINT(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE for_sale(
+	sale_id BIGINT(100) AUTO_INCREMENT PRIMARY KEY,
+	head_addr VARCHAR(100) NOT NULL,
+	addr_jibun VARCHAR(100) NOT NULL,
+	addr_daero VARCHAR(100) DEFAULT 'N',
+	price INT(100) NOT NULL,
+	owner_id BIGINT(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
