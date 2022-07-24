@@ -4,16 +4,43 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.portfolio.realty.repository.ConditionDAO">
-    <insert id="insertUser" parameterType="conditionVO">
-        INSERT INTO user(
-        email
-        , nick_name
-        , name
+    <insert id="insertCondition" parameterType="conditionVO">
+        INSERT INTO my_condition(
+            preset_name
+            , addr_do
+            , addr_si
+            , addr_gu
+            , addr_dong
+            , addr_daero
+            , addr_remain
+            , budget
+            , my_condition
         ) VALUES (
-        #{email}
-        , #{nickName}
-        , #{name}
+            #{presetName}
+            , #{addrDo}
+            , #{addrSi}
+            , #{addrGu}
+            , #{addrDong}
+            , #{addrDaero}
+            , #{addrRemain}
+            , #{budget}
+            , #{myCondition}
         )
     </insert>
+
+    <select id="selectConditionList" resultType="conditionVO">
+
+    </select>
+    <select id="selectCondition" parameterType="long" resultType="conditionVO">
+
+    </select>
+
+    <update id="updateCondition" parameterType="conditionVO">
+
+    </update>
+
+    <delete id="deleteCondition" parameterType="long">
+
+    </delete>
 
 </mapper>

@@ -12,12 +12,14 @@ public class UserVO {
     private String nickName;
     private String name;
 
+    // insert
     public UserVO(String email, String nickName, String name) {
         this.email = email;
         this.nickName = nickName;
         this.name = name;
     }
 
+    // update
     public UserVO(long userId, String nickName, String name) {
         this.userId = userId;
         this.nickName = nickName;

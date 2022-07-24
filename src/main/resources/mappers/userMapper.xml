@@ -39,6 +39,12 @@
         FROM user
         WHERE email = #{email}
     </select>
+    <select id="selectUserId" parameterType="string" resultType="string">
+        SELECT
+            user_id
+        FROM user
+        WHERE email = #{email}
+    </select>
     
     <update id="updateUser" parameterType="userVO">
         UPDATE user SET(

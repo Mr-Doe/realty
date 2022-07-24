@@ -14,4 +14,5 @@ public interface UserDAO {
     int checkEmail(String email);
     int updateUser(UserVO userVO);
     int deleteUser(long userId);
+    String selectUserId(String email);
 }
