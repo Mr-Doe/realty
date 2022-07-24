@@ -29,18 +29,50 @@
     </insert>
 
     <select id="selectConditionList" resultType="conditionVO">
-
+        SELECT
+            condition_id
+            , preset_name
+            , budget
+            , my_condition
+        FROM
+            my_condition
     </select>
     <select id="selectCondition" parameterType="long" resultType="conditionVO">
-
+        SELECT
+            condition_id
+            , preset_name
+            , addr_do
+            , addr_si
+            , addr_gu
+            , addr_dong
+            , addr_daero
+            , addr_remain
+            , budget
+            , activated
+            , my_condition
+        FROM
+            my_condition
+        WHERE
+            condition_id = #{conditionId}
     </select>
 
     <update id="updateCondition" parameterType="conditionVO">
-
+        UPDATE my_condition SET(
+            preset_name = #{presetName}
+            , addr_do = #{addrDo}
+            , addr_si = #{addrSi}
+            , addr_gu = #{addrGu}
+            , addr_dong = #{addrDong}
+            , addr_daero = #{addrDaero}
+            , addr_remain = #{addrRemain}
+            , budget = #{budget}
+        ) WHERE
+            condition_id = #{conditionId}
     </update>
 
     <delete id="deleteCondition" parameterType="long">
-
+        DELETE FROM my_condition
+        WHERE condition_id = #{conditionId}
     </delete>
 
 </mapper>
