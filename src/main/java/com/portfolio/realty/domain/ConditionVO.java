@@ -8,7 +8,6 @@ import org.apache.ibatis.type.Alias;
 
 @Getter @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Alias("conditionVO")
 public class ConditionVO {
     private long conditionId;

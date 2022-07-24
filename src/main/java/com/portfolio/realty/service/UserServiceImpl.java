@@ -14,8 +14,21 @@ public class UserServiceImpl implements UserService{
     private UserDAO userDAO;
 
     @Override
-    public int register(UserVO userVO) {
-        return userDAO.insertUser(userVO);
+    public int login(UserVO userVO) {
+        int member = userDAO.checkEmail(userVO.getEmail());
+        if(member == 0) {
+            member = userDAO.insertUser(userVO);
+        } else {
+            UserVO updateInfo = userDAO.selectUser(userVO.getEmail());
+            if (userVO.getNickName() != updateInfo.getNickName()
+                    || userVO.getName() != updateInfo.getName()) {
+                member = userDAO.updateUser(new UserVO(
+                        updateInfo.getUserId(),
+                        userVO.getNickName(),
+                        userVO.getName()));
+            }
+        }
+        return member;
     }
 
     @Override
@@ -24,18 +37,8 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public UserVO getUser(long userId) {
-        return userDAO.selectUser(userId);
-    }
-
-    @Override
-    public int checkUser(String email) {
-        return userDAO.checkEmail(email);
-    }
-
-    @Override
-    public int modifyUser(UserVO userVO) {
-        return userDAO.updateUser(userVO);
+    public UserVO getUser(String email) {
+        return userDAO.selectUser(email);
     }
 
     @Override

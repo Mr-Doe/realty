@@ -10,7 +10,7 @@ import java.util.List;
 public interface UserDAO {
     int insertUser(UserVO userVO);
     List<UserVO> selectUserList();
-    UserVO selectUser(long userId);
+    UserVO selectUser(String email);
     int checkEmail(String email);
     int updateUser(UserVO userVO);
     int deleteUser(long userId);

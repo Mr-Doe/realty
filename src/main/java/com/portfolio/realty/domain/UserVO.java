@@ -1,14 +1,10 @@
 package com.portfolio.realty.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.apache.ibatis.type.Alias;
 
 @Getter @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Alias("userVO")
 public class UserVO {
     private long userId;
@@ -16,5 +12,16 @@ public class UserVO {
     private String nickName;
     private String name;
 
+    public UserVO(String email, String nickName, String name) {
+        this.email = email;
+        this.nickName = nickName;
+        this.name = name;
+    }
+
+    public UserVO(long userId, String nickName, String name) {
+        this.userId = userId;
+        this.nickName = nickName;
+        this.name = name;
+    }
 }
 

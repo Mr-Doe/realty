@@ -5,10 +5,8 @@ import com.portfolio.realty.domain.UserVO;
 import java.util.List;
 
 public interface UserService {
-    int register(UserVO userVO);
+    int login(UserVO userVO);
     List<UserVO> getListUser();
-    UserVO getUser(long userId);
-    int checkUser(String email);
-    int modifyUser(UserVO userVO);
+    UserVO getUser(String email);
     int removeUser(long userId );
 }
