@@ -12,7 +12,7 @@
             , addr_gu
             , addr_dong
             , addr_daero
-            , addr_remain
+            , addr_detail
             , budget
             , my_condition
         ) VALUES (
@@ -22,7 +22,7 @@
             , #{addrGu}
             , #{addrDong}
             , #{addrDaero}
-            , #{addrRemain}
+            , #{addrDetail}
             , #{budget}
             , #{myCondition}
         )
@@ -46,7 +46,7 @@
             , addr_gu
             , addr_dong
             , addr_daero
-            , addr_remain
+            , addr_detail
             , budget
             , activated
             , my_condition
@@ -64,7 +64,7 @@
             , addr_gu = #{addrGu}
             , addr_dong = #{addrDong}
             , addr_daero = #{addrDaero}
-            , addr_remain = #{addrRemain}
+            , addr_detail = #{addrDetail}
             , budget = #{budget}
         ) WHERE
             condition_id = #{conditionId}

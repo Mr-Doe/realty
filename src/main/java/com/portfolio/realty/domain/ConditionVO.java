@@ -17,20 +17,20 @@ public class ConditionVO {
     private String addrGu;
     private String addrDong;
     private String addrDaero;
-    private String addrRemain;
+    private String addrDetail;
     private int budget;
     private String activated;
     private long myCondition;
 
     // insert
-    public ConditionVO(String presetName, String addrDo, String addrSi, String addrGu, String addrDong, String addrDaero, String addrRemain, int budget, long myCondition) {
+    public ConditionVO(String presetName, String addrDo, String addrSi, String addrGu, String addrDong, String addrDaero, String addrDetail, int budget, long myCondition) {
         this.presetName = presetName;
         this.addrDo = addrDo;
         this.addrSi = addrSi;
         this.addrGu = addrGu;
         this.addrDong = addrDong;
         this.addrDaero = addrDaero;
-        this.addrRemain = addrRemain;
+        this.addrDetail = addrDetail;
         this.budget = budget;
         this.myCondition = myCondition;
     }
@@ -44,7 +44,7 @@ public class ConditionVO {
     }
 
     // detail
-    public ConditionVO(long conditionId, String presetName, String addrDo, String addrSi, String addrGu, String addrDong, String addrDaero, String addrRemain, int budget, String activated, long myCondition) {
+    public ConditionVO(long conditionId, String presetName, String addrDo, String addrSi, String addrGu, String addrDong, String addrDaero, String addrDetail, int budget, String activated, long myCondition) {
         this.conditionId = conditionId;
         this.presetName = presetName;
         this.addrDo = addrDo;
@@ -52,14 +52,14 @@ public class ConditionVO {
         this.addrGu = addrGu;
         this.addrDong = addrDong;
         this.addrDaero = addrDaero;
-        this.addrRemain = addrRemain;
+        this.addrDetail = addrDetail;
         this.budget = budget;
         this.activated = activated;
         this.myCondition = myCondition;
     }
 
     // update
-    public ConditionVO(long conditionId, String presetName, String addrDo, String addrSi, String addrGu, String addrDong, String addrDaero, String addrRemain, int budget) {
+    public ConditionVO(long conditionId, String presetName, String addrDo, String addrSi, String addrGu, String addrDong, String addrDaero, String addrDetail, int budget) {
         this.conditionId = conditionId;
         this.presetName = presetName;
         this.addrDo = addrDo;
@@ -67,7 +67,7 @@ public class ConditionVO {
         this.addrGu = addrGu;
         this.addrDong = addrDong;
         this.addrDaero = addrDaero;
-        this.addrRemain = addrRemain;
+        this.addrDetail = addrDetail;
         this.budget = budget;
     }
 
